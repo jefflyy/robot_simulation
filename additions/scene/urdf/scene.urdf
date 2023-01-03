@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="scene">
+  <link
+    name="world">
+    <inertial>
+      <origin
+        xyz="-2.08166817117217E-17 0.005 4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="102.4" />
+      <inertia
+        ixx="87.3821866666666"
+        ixy="-4.736951571734E-18"
+        ixz="-9.2370555648813E-15"
+        iyy="174.762666666667"
+        iyz="3.00926553810506E-33"
+        izz="87.3821866666666" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/world.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/world.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="stair_platform_1">
+    <inertial>
+      <origin
+        xyz="0.011675 0.13426 0.074988"
+        rpy="0 0 0" />
+      <mass
+        value="31.837" />
+      <inertia
+        ixx="0.25988"
+        ixy="-0.039931"
+        ixz="-4.4014E-06"
+        iyy="1.6384"
+        iyz="4.7404E-05"
+        izz="1.7779" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stair_platform_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stair_platform_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stair_platform_joint_1"
+    type="fixed">
+    <origin
+      xyz="0 -1.3 0.0100000000000001"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="stair_platform_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="stair_platform_2">
+    <inertial>
+      <origin
+        xyz="0.011675 0.13426 0.074988"
+        rpy="0 0 0" />
+      <mass
+        value="31.837" />
+      <inertia
+        ixx="0.25988"
+        ixy="-0.039931"
+        ixz="-4.4014E-06"
+        iyy="1.6384"
+        iyz="4.7404E-05"
+        izz="1.7779" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stair_platform_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stair_platform_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stair_platform_joint_2"
+    type="fixed">
+    <origin
+      xyz="0 1.3 0.00999999999999992"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="world" />
+    <child
+      link="stair_platform_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="storage_bin">
+    <inertial>
+      <origin
+        xyz="0.175 0.05 -0.175"
+        rpy="0 0 0" />
+      <mass
+        value="3.3504" />
+      <inertia
+        ixx="0.045251"
+        ixy="1.8121E-18"
+        ixz="-0.0022893"
+        iyy="0.082431"
+        iyz="-3.0052E-18"
+        izz="0.042765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/storage_bin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/storage_bin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="storage_bin_link"
+    type="fixed">
+    <origin
+      xyz="-0.174999999999997 -0.174999999999999 0.05"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="storage_bin" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="circle_platform_1">
+    <inertial>
+      <origin
+        xyz="9.7476E-20 0.11709 1.1102E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.0862" />
+      <inertia
+        ixx="0.013509"
+        ixy="-1.5131E-20"
+        ixz="-2.0832E-19"
+        iyy="0.0027529"
+        iyz="-3.0985E-18"
+        izz="0.013509" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/circle_platform_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/circle_platform_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="circle_platform_link_1"
+    type="fixed">
+    <origin
+      xyz="0 -0.8 0.01"
+      rpy="1.5708 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="circle_platform_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="circle_platform_2">
+    <inertial>
+      <origin
+        xyz="5.6008E-15 0.11709 1.1102E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.0862" />
+      <inertia
+        ixx="0.013509"
+        ixy="-1.3032E-18"
+        ixz="-1.8776E-19"
+        iyy="0.0027529"
+        iyz="-3.0215E-18"
+        izz="0.013509" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/circle_platform_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/circle_platform_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="circle_platform_link_2"
+    type="fixed">
+    <origin
+      xyz="0 0.8 0.01"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="world" />
+    <child
+      link="circle_platform_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="stacking_platform_1">
+    <inertial>
+      <origin
+        xyz="0 0.12346 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.17932" />
+      <inertia
+        ixx="0.0008648"
+        ixy="-2.3084E-36"
+        ixz="3.1251E-37"
+        iyy="3.1205E-05"
+        iyz="-2.2534E-21"
+        izz="0.0008648" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stacking_platform_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stacking_platform_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stacking_platform_link_1"
+    type="fixed">
+    <origin
+      xyz="-0.147999999999997 -0.147999999999999 0.01"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="stacking_platform_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="stacking_platform_2">
+    <inertial>
+      <origin
+        xyz="0 0.12346 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.17932" />
+      <inertia
+        ixx="0.0008648"
+        ixy="1.0597E-34"
+        ixz="-4.133E-35"
+        iyy="3.1205E-05"
+        iyz="1.6412E-20"
+        izz="0.0008648" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stacking_platform_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/stacking_platform_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stacking_platform_link_2"
+    type="fixed">
+    <origin
+      xyz="0.148 0.148 0.01"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="world" />
+    <child
+      link="stacking_platform_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rotating_disk">
+    <inertial>
+      <origin
+        xyz="2.2204E-16 0.1866 1.1102E-16"
+        rpy="0 0 0" />
+      <mass
+        value="3.6113" />
+      <inertia
+        ixx="0.038817"
+        ixy="8.5236E-18"
+        ixz="-1.0408E-17"
+        iyy="0.024416"
+        iyz="6.8656E-18"
+        izz="0.038817" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/rotating_disk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 1 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/rotating_disk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotating_disk_joint"
+    type="revolute">
+    <origin
+      xyz="1.2 0 0.01"
+      rpy="1.5708 0 0.66939" />
+    <parent
+      link="world" />
+    <child
+      link="rotating_disk" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="roadblock">
+    <inertial>
+      <origin
+        xyz="2.2204E-16 0.1 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.25133" />
+      <inertia
+        ixx="0.00086289"
+        ixy="-9.7136E-37"
+        ixz="0"
+        iyy="5.0265E-05"
+        iyz="6.2676E-37"
+        izz="0.00086289" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/roadblock.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scene/meshes/roadblock.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roadblock_joint"
+    type="fixed">
+    <origin
+      xyz="1.2 -0.8 0.01"
+      rpy="1.5708 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="roadblock" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
